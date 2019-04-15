@@ -1,20 +1,20 @@
 module Jsonapi
-  class SerializableGenerator < ::Rails::Generators::NamedBase
+  class TypeGenerator < ::Rails::Generators::NamedBase
     source_root File.expand_path('../templates', __FILE__)
 
     # TODO(beauby): Implement generator-level whitelisting.
     # TODO(beauby): Implement versioning.
 
     def copy_serializable_file
-      template 'serializable.rb.erb',
-               File.join('app/serializable', class_path,
+      template 'type.rb.erb',
+               File.join('app/resources', class_path,
                          "#{serializable_file_name}.rb")
     end
 
     private
 
     def serializable_file_name
-      "serializable_#{file_name}"
+      "#{file_name}_resouce"
     end
 
     def serializable_class_name
