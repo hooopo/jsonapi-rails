@@ -14,7 +14,7 @@ module Jsonapi
     private
 
     def serializable_file_name
-      "#{file_name}_resouce"
+      "#{file_name}_resource"
     end
 
     def serializable_class_name
