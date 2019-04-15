@@ -1,7 +1,7 @@
 version = File.read(File.expand_path('../VERSION', __FILE__)).strip
 
 Gem::Specification.new do |spec|
-  spec.name          = 'jsonapi-rails'
+  spec.name          = 'jsonapi-rails-generator'
   spec.version       = version
   spec.author        = ['hooopo']
   spec.email         = ['hoooopo@gmail.com']
